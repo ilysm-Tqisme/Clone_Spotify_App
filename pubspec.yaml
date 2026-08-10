@@ -1,5 +1,5 @@
 name: clone_spotify
-description: "A new Flutter project."
+description: "Clone Spotify application."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -30,10 +30,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  
 
 dev_dependencies:
   flutter_test:
@@ -45,7 +47,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
-
+#  flutter_launcher_name: "^0.0.1"
+  flutter_launcher_icons: "^0.14.4"
+# Flutter Native Splash
+  flutter_native_splash: ^2.4.7
+# flutter rename
+  rename: ^3.1.0   
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -56,11 +63,10 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
   # To add assets to your application, add an assets section, like this:
   # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - lib/assets/images/logo/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -87,3 +93,26 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+flutter_launcher_icons:
+  android: true
+  ios: true
+
+  # Icon dùng cho iOS
+  image_path: "lib/assets/images/logo/spotify_logo.png"
+
+  # Android Adaptive Icon
+  adaptive_icon_background: "#000000"
+  adaptive_icon_foreground: "lib/assets/images/logo/spotify_logo.png"
+
+  min_sdk_android: 21
+  # For information on the generic Dart part of this file, see the
+  # following page: https://dart.dev/tools/pub/pubspec
+flutter_native_splash:
+  color: "#000000"
+  image: "lib/assets/images/logo/spotify_logo.png"
+  image_mode: cover
+  android_12:
+    image: "lib/assets/images/logo/spotify_logo.png"
+    color: "#000000"
