@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:clone_spotify/screens/auth/email_login.dart';
+import 'package:clone_spotify/screens/auth/email_register.dart';
 
 class FirstHome extends StatelessWidget {
   const FirstHome({super.key});
@@ -124,7 +126,12 @@ class FirstHome extends StatelessWidget {
 
                           child: ElevatedButton(
                             onPressed: () {
-                              print('Sign up free clicked');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const EmailRegister(),
+                                ),
+                              );
                             },
 
                             style: ElevatedButton.styleFrom(
@@ -202,7 +209,12 @@ class FirstHome extends StatelessWidget {
                         // ================================================
                         TextButton(
                           onPressed: () {
-                            print('Log in clicked');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const EmailLogin(),
+                              ),
+                            );
                           },
 
                           style: TextButton.styleFrom(
