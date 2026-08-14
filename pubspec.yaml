@@ -35,6 +35,12 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+
+  # State management dùng cho toàn bộ app (player, thư viện, ...)
+  provider: ^6.1.2
+
+  # Audio player để phát các file mp3 local trong lib/assets/musics
+  just_audio: ^0.10.4
   
 
 dev_dependencies:
@@ -68,6 +74,7 @@ flutter:
   assets:
     - lib/assets/images/logo/
     - lib/assets/images/artists/
+    - lib/assets/musics/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

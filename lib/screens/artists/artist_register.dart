@@ -1,3 +1,4 @@
+import 'package:clone_spotify/screens/home/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class ArtistRegister extends StatefulWidget {
@@ -92,13 +93,11 @@ class _ArtistRegisterState extends State<ArtistRegister> {
 
     debugPrint('Selected artists: ${_selectedArtists.join(', ')}');
 
-    // TODO:
-    // Navigator.push(
-    //   context,
-    //   MaterialPageRoute(
-    //     builder: (context) => const HomeScreen(),
-    //   ),
-    // );
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => const MainScreen()),
+      (route) => false,
+    );
   }
 
   @override

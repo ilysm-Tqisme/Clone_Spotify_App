@@ -1,3 +1,4 @@
+import 'package:clone_spotify/screens/home/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class EmailLogin extends StatefulWidget {
@@ -55,9 +56,16 @@ class _EmailLoginState extends State<EmailLogin> {
 
     if (email.isEmpty || password.isEmpty) return;
 
-    // TODO: Xử lý login ở đây
+    // TODO: Xử lý login thật (gọi API) ở đây. Hiện tại demo bằng cách
+    // vào thẳng màn hình chính của app.
     debugPrint('Email: $email');
     debugPrint('Password: $password');
+
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => const MainScreen()),
+      (route) => false,
+    );
   }
 
   @override
